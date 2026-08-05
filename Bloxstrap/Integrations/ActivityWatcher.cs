@@ -18,7 +18,7 @@ namespace Bloxstrap.Integrations
 
         private const string GameJoiningEntryPattern         = @"! Joining game '([0-9a-f\-]{36})' place ([0-9]+) at ([0-9\.]+)";
         private const string GameJoinReferralPattern         = @"referral_page:([^,]+)";
-        private const string GameTeleportJoinTypePattern = @"JoinTypeId""%3a(\d+)%2c";
+        private const string GameTeleportJoinTypePattern     = @"JoinTypeId""%3a(\d+)%2c";
         private const string GameJoiningUniversePattern      = @"universeid:([0-9]+).*userid:([0-9]+)";
         private const string GameJoiningUDMUXPattern         = @"UDMUX Address = ([0-9\.]+), Port = [0-9]+ \| RCC Server Address = ([0-9\.]+), Port = [0-9]+";
         private const string GameJoinedEntryPattern          = @"serverId: ([0-9\.]+)\|[0-9]+";
