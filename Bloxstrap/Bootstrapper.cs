@@ -1222,7 +1222,7 @@ namespace Bloxstrap
 
             AppData.DistributionState.Size = distributionSize;
 
-            int totalSize = App.PlayerState.Prop.Size + App.PlayerState.Prop.Size;
+            int totalSize = App.PlayerState.Prop.Size + App.StudioState.Prop.Size;
 
             using (var uninstallKey = Registry.CurrentUser.CreateSubKey(App.UninstallKey))
             {
