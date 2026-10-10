@@ -136,8 +136,11 @@
             {
                 await _semaphore.WaitAsync();
                 await _filestream!.WriteAsync(Encoding.UTF8.GetBytes($"{message}\r\n"));
-
-                _ = _filestream.FlushAsync();
+                await _filestream.FlushAsync();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"WriteToLog failed: {ex.Message}");
             }
             finally
             {
