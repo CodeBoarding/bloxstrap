@@ -1,0 +1,4274 @@
+{
+  "repository_name": ".codeboarding-target",
+  "timestamp": "2026-10-10T19:02:08.249356+00:00",
+  "overall_score": 0.5073212747631353,
+  "check_summaries": [
+    {
+      "check_name": "function_size",
+      "description": "Checks that functions/methods do not exceed line count thresholds",
+      "languages": [
+        "csharp"
+      ],
+      "check_type": "standard",
+      "total_entities_checked": 595,
+      "findings_count": 6,
+      "warning_count": 6,
+      "score": 0.9899159663865547,
+      "finding_groups": [
+        {
+          "severity": "warning",
+          "threshold": 150,
+          "description": "Functions exceeding 150.0 lines",
+          "entities": [
+            {
+              "entity_name": "Bloxstrap.Installer.HandleUpgrade()",
+              "file_path": "Bloxstrap/Installer.cs",
+              "line_start": 363,
+              "line_end": 646,
+              "metric_value": 283
+            },
+            {
+              "entity_name": "Bloxstrap.Integrations.ActivityWatcher.ReadLogEntry(string entry)",
+              "file_path": "Bloxstrap/Integrations/ActivityWatcher.cs",
+              "line_start": 130,
+              "line_end": 385,
+              "metric_value": 255
+            },
+            {
+              "entity_name": "Bloxstrap.Bootstrapper.UpgradeRoblox()",
+              "file_path": "Bloxstrap/Bootstrapper.cs",
+              "line_start": 1013,
+              "line_end": 1241,
+              "metric_value": 228
+            },
+            {
+              "entity_name": "Bloxstrap.Bootstrapper.ApplyModifications()",
+              "file_path": "Bloxstrap/Bootstrapper.cs",
+              "line_start": 1257,
+              "line_end": 1454,
+              "metric_value": 197
+            },
+            {
+              "entity_name": "Bloxstrap.Installer.DoUninstall(bool keepData)",
+              "file_path": "Bloxstrap/Installer.cs",
+              "line_start": 198,
+              "line_end": 362,
+              "metric_value": 164
+            },
+            {
+              "entity_name": "Bloxstrap.App.xaml.App.OnStartup(StartupEventArgs e)",
+              "file_path": "Bloxstrap/App.xaml.cs",
+              "line_start": 239,
+              "line_end": 400,
+              "metric_value": 161
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "check_name": "circular_dependencies",
+      "description": "Detects circular dependencies between packages",
+      "languages": [
+        "csharp"
+      ],
+      "check_type": "circular_dependencies",
+      "cycles": [
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.Models -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.Models.Manifest -> Bloxstrap.RobloxInterfaces -> Bloxstrap.Utility -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.Models.Manifest -> Bloxstrap.RobloxInterfaces -> Bloxstrap.Utility -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.RobloxInterfaces -> Bloxstrap.Utility -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.RobloxInterfaces -> Bloxstrap.Utility -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.ViewModels.Bootstrapper -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.ViewModels.Bootstrapper -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.ViewModels.Bootstrapper -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.ViewModels.Bootstrapper -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Dialogs -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Dialogs -> Bloxstrap.Utility -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Dialogs -> Bloxstrap.Utility -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Installer -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.Models -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.Models.SettingTasks -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.Models.SettingTasks -> Bloxstrap.Models.Entities -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.Models.SettingTasks -> Bloxstrap.Models.Entities -> Bloxstrap.Utility -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.Models.SettingTasks -> Bloxstrap.Models.Entities -> Bloxstrap.Utility -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.Models.SettingTasks -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.Models.SettingTasks -> Bloxstrap.Utility -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.Models.SettingTasks -> Bloxstrap.Utility -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.ViewModels.Bootstrapper -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.ViewModels.Bootstrapper -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.ViewModels.Bootstrapper -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.ViewModels.Bootstrapper -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Dialogs -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Dialogs -> Bloxstrap.Utility -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Dialogs -> Bloxstrap.Utility -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Editor -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Editor -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Editor -> Bloxstrap.UI.ViewModels.Editor -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Editor -> Bloxstrap.UI.ViewModels.Editor -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Editor -> Bloxstrap.UI.ViewModels.Editor -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.Extensions -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations",
+        "Bloxstrap.Integrations -> Bloxstrap -> Bloxstrap.UI.Elements.Settings -> Bloxstrap.UI.ViewModels.Settings -> Bloxstrap.UI.Elements.Editor -> Bloxstrap.UI.ViewModels.Editor -> Bloxstrap.UI.Elements.Bootstrapper -> Bloxstrap.UI.Elements.Bootstrapper.Base -> Bloxstrap.UI -> Bloxstrap.UI.Elements.ContextMenu -> Bloxstrap.Integrations"
+      ],
+      "packages_checked": 48,
+      "packages_in_cycles": 20
+    },
+    {
+      "check_name": "unused_code_diagnostics",
+      "description": "Detects unused imports, variables, functions, and dead code via LSP diagnostics",
+      "languages": [
+        "csharp"
+      ],
+      "check_type": "standard",
+      "total_entities_checked": 566,
+      "findings_count": 566,
+      "warning_count": 566,
+      "score": 0.0,
+      "finding_groups": [
+        {
+          "severity": "warning",
+          "threshold": 0,
+          "description": "Unused import statements that should be removed",
+          "entities": [
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/EmojiModPresetTask.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/EmojiModPresetTask.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Watcher.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/WindowsRegistry.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Thumbnails.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Thumbnails.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Thumbnails.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Thumbnails.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Thumbnails.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Shortcut.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Shortcut.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/PathValidator.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/PathValidator.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/PathValidator.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/PathValidator.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/PathValidator.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/MD5Hash.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/InterProcessLock.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/InterProcessLock.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/InterProcessLock.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/InterProcessLock.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/InterProcessLock.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/FixedCapacityList.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/FixedCapacityList.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/FixedCapacityList.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/FixedCapacityList.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/FixedCapacityList.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Filesystem.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Filesystem.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Filesystem.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Filesystem.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Filesystem.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utility/Filesystem.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Utilities.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/ModsViewModel.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/ModsViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/ModsViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/ModsViewModel.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/ModsViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/ModsViewModel.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/ModsViewModel.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/ModsViewModel.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/MainWindowViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/MainWindowViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/MainWindowViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/IntegrationsViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/IntegrationsViewModel.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/IntegrationsViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/IntegrationsViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/FastFlagsViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/FastFlagsViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/FastFlagsViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/BloxstrapViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/BloxstrapViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/BloxstrapViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/BloxstrapViewModel.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/BloxstrapViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/AppearanceViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/AppearanceViewModel.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/AppearanceViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/AppearanceViewModel.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/AppearanceViewModel.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/AppearanceViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Settings/AppearanceViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/NotifyPropertyChangedViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Installer/MainWindowViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Installer/MainWindowViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Installer/InstallViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Installer/InstallViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Installer/InstallViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Installer/CompletionViewModel.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Installer/CompletionViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Installer/CompletionViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Installer/CompletionViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Installer/CompletionViewModel.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/GlobalViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/GlobalViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Editor/BootstrapperEditorWindowViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Editor/BootstrapperEditorWindowViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Editor/BootstrapperEditorWindowViewModel.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Editor/BootstrapperEditorWindowViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Editor/BootstrapperEditorWindowViewModel.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Editor/BootstrapperEditorWindowViewModel.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Editor/BootstrapperEditorWindowViewModel.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Editor/BootstrapperEditorWindowViewModel.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/UninstallerViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/UninstallerViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/UninstallerViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/LaunchMenuViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/LaunchMenuViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/LaunchMenuViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/LanguageSelectorViewModel.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/LanguageSelectorViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/LanguageSelectorViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/LanguageSelectorViewModel.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/LanguageSelectorViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/LanguageSelectorViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/LanguageSelectorViewModel.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/AddCustomThemeViewModel.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/AddCustomThemeViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/AddCustomThemeViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/AddCustomThemeViewModel.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/AddCustomThemeViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Dialogs/AddCustomThemeViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/ContextMenu/ServerInformationViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/ContextMenu/ServerInformationViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/ContextMenu/ServerInformationViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/ContextMenu/ServerHistoryViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/ContextMenu/ServerHistoryViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/FluentDialogViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/FluentDialogViewModel.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/FluentDialogViewModel.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/FluentDialogViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/FluentDialogViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/FluentDialogViewModel.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/FluentDialogViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/ClassicFluentDialogViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/ClassicFluentDialogViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/ClassicFluentDialogViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/ByfronDialogViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/ByfronDialogViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/ByfronDialogViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/BootstrapperDialogViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/BootstrapperDialogViewModel.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/BootstrapperDialogViewModel.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/BootstrapperDialogViewModel.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/Bootstrapper/BootstrapperDialogViewModel.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/About/SupportersViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/ViewModels/About/AboutViewModel.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Utility/WindowScaling.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Utility/WindowScaling.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Utility/TaskbarProgress.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Utility/TaskbarProgress.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Utility/Rendering.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Utility/Rendering.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Utility/Rendering.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Utility/Rendering.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/NotifyIconWrapper.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/IBootstrapperDialog.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/IBootstrapperDialog.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Frontend.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 14,
+              "line_end": 14,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/IntegrationsPage.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/FastFlagsPage.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/FastFlagsPage.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/FastFlagsPage.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/FastFlagEditorPage.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/FastFlagEditorPage.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/FastFlagEditorPage.xaml.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/FastFlagEditorPage.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/FastFlagEditorPage.xaml.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/FastFlagEditorPage.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/FastFlagEditorPage.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 14,
+              "line_end": 14,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BloxstrapPage.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BloxstrapPage.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BloxstrapPage.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BloxstrapPage.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BloxstrapPage.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/Pages/AppearancePage.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/MainWindow.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/MainWindow.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/MainWindow.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/MainWindow.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Settings/MainWindow.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/Pages/WelcomePage.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/Pages/InstallPage.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/Pages/InstallPage.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/Pages/CompletionPage.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/MainWindow.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/MainWindow.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/MainWindow.xaml.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/MainWindow.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/MainWindow.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/MainWindow.xaml.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/MainWindow.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Installer/MainWindow.xaml.cs",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Editor/BootstrapperEditorWindow.xaml.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Editor/BootstrapperEditorWindow.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Editor/BootstrapperEditorWindow.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Editor/BootstrapperEditorWindow.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Editor/BootstrapperEditorWindow.xaml.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Editor/BootstrapperEditorWindow.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Editor/BootstrapperEditorWindow.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Editor/BootstrapperEditorWindow.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 15,
+              "line_end": 15,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 16,
+              "line_end": 16,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 14,
+              "line_end": 14,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+              "line_start": 16,
+              "line_end": 16,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/FluentMessageBox.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/FluentMessageBox.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/FluentMessageBox.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/FluentMessageBox.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/FluentMessageBox.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/FluentMessageBox.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/FluentMessageBox.xaml.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ExceptionDialog.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ExceptionDialog.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ExceptionDialog.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ExceptionDialog.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ExceptionDialog.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ExceptionDialog.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ConnectivityDialog.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ConnectivityDialog.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ConnectivityDialog.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ConnectivityDialog.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ConnectivityDialog.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/ConnectivityDialog.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/AddFastFlagDialog.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/AddFastFlagDialog.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/AddFastFlagDialog.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/AddCustomThemeDialog.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/AddCustomThemeDialog.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Dialogs/AddCustomThemeDialog.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 14,
+              "line_end": 14,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 15,
+              "line_end": 15,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/MarkdownTextBlock.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/MarkdownTextBlock.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/MarkdownTextBlock.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/MarkdownTextBlock.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/MarkdownTextBlock.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/MarkdownTextBlock.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/MarkdownTextBlock.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/MarkdownTextBlock.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 16,
+              "line_end": 16,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 15,
+              "line_end": 15,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 14,
+              "line_end": 14,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 15,
+              "line_end": 15,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/MenuContainer.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/MenuContainer.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/MenuContainer.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/MenuContainer.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/MenuContainer.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/ContextMenu/MenuContainer.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/VistaDialog.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ProgressDialog.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ProgressDialog.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ProgressDialog.Designer.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/LegacyDialog2011.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/LegacyDialog2011.Designer.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/LegacyDialog2008.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/LegacyDialog2008.Designer.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 18,
+              "line_end": 18,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 17,
+              "line_end": 17,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 16,
+              "line_end": 16,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 15,
+              "line_end": 15,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 14,
+              "line_end": 14,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 20,
+              "line_end": 20,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+              "line_start": 19,
+              "line_end": 19,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Utilities.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Utilities.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Utilities.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Utilities.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Creator.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Creator.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Converters.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Converters.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Converters.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Converters.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Converters.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ClassicFluentDialog.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ClassicFluentDialog.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ClassicFluentDialog.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ByfronDialog.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ByfronDialog.xaml.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ByfronDialog.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ByfronDialog.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ByfronDialog.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/ByfronDialog.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/Base/WinFormsDialogBase.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/Base/WinFormsDialogBase.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Bootstrapper/Base/BaseFunctions.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Base/WpfUiWindow.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Base/WpfUiWindow.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Base/WpfUiWindow.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Base/WpfUiWindow.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Base/WpfUiWindow.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/Base/WpfUiWindow.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/About/Pages/SupportersPage.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/About/Pages/AboutPage.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/About/Pages/AboutPage.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/About/MainWindow.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/About/MainWindow.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Elements/About/MainWindow.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/StringFormatConverter.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/StringFormatConverter.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/StringFormatConverter.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/StringFormatConverter.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/StringFormatConverter.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/StringFormatConverter.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/RangeConverter.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/EnumNameConverter.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/EnumNameConverter.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/EnumNameConverter.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/EnumNameConverter.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/EnumNameConverter.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/EnumNameConverter.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/EnumNameConverter.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/UI/Converters/EnumNameConverter.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/RobloxInterfaces/ApplicationSettings.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Resources/Strings.Designer.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Resource.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Properties/Resources.Designer.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/ModPresetTask.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/ModPresetTask.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/FontModPresetTask.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/ExtractIconsTask.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/EnumModPresetTask.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/EnumModPresetTask.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/StringBaseTask.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/StringBaseTask.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/StringBaseTask.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/StringBaseTask.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/StringBaseTask.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/BoolBaseTask.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/BoolBaseTask.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/BoolBaseTask.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/BoolBaseTask.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/BoolBaseTask.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/BaseTask.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/BaseTask.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/BaseTask.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/BaseTask.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/SettingTasks/Base/BaseTask.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Persistable/Settings.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/LaunchFlag.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/LaunchFlag.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/LaunchFlag.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/LaunchFlag.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/LaunchFlag.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Entities/ModPresetFileData.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Entities/ModPresetFileData.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Entities/ActivityData.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Entities/ActivityData.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Entities/ActivityData.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Entities/ActivityData.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/BootstrapperIconEntry.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Attributes/EnumSortAttribute.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Attributes/EnumSortAttribute.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Attributes/EnumSortAttribute.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Attributes/EnumSortAttribute.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Attributes/EnumSortAttribute.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Attributes/EnumNameAttribute.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Attributes/EnumNameAttribute.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Attributes/EnumNameAttribute.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Attributes/EnumNameAttribute.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Models/Attributes/EnumNameAttribute.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Locale.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchSettings.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchSettings.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchSettings.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchSettings.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchSettings.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchSettings.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchSettings.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchSettings.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchSettings.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchHandler.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchHandler.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchHandler.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/LaunchHandler.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Integrations/DiscordRichPresence.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Integrations/DiscordRichPresence.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Integrations/DiscordRichPresence.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Installer.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Installer.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 12,
+              "line_end": 12,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 9,
+              "line_end": 9,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 14,
+              "line_end": 14,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 8,
+              "line_end": 8,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/GlobalUsings.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/ThemeEx.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/TEnumEx.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/TEnumEx.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/ResourceManagerEx.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/RegistryKeyEx.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/IconEx.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/IconEx.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/IconEx.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/IconEx.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/HttpClientEx.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/HttpClientEx.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/HttpClientEx.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/HttpClientEx.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/HttpClientEx.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/CustomThemeTemplateEx.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Extensions/BootstrapperIconEx.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/InvalidHTTPResponseException.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/InvalidHTTPResponseException.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/InvalidHTTPResponseException.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/InvalidHTTPResponseException.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/InvalidHTTPResponseException.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/CustomThemeException.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/CustomThemeException.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/CustomThemeException.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/CustomThemeException.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/CustomThemeException.cs",
+              "line_start": 6,
+              "line_end": 6,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/CustomThemeException.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/ChecksumFailedException.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/ChecksumFailedException.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/ChecksumFailedException.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/ChecksumFailedException.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/ChecksumFailedException.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/AssertionException.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/AssertionException.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/AssertionException.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/AssertionException.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Exceptions/AssertionException.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Enums/WebEnvironment.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Bootstrapper.cs",
+              "line_start": 20,
+              "line_end": 20,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Bootstrapper.cs",
+              "line_start": 14,
+              "line_end": 14,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Bootstrapper.cs",
+              "line_start": 26,
+              "line_end": 26,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Bootstrapper.cs",
+              "line_start": 18,
+              "line_end": 18,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Bootstrapper.cs",
+              "line_start": 17,
+              "line_end": 17,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Bootstrapper.cs",
+              "line_start": 15,
+              "line_end": 15,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/Bootstrapper.cs",
+              "line_start": 16,
+              "line_end": 16,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/AssemblyInfo.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/AppData/CommonAppData.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/AppData/CommonAppData.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/AppData/CommonAppData.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/AppData/CommonAppData.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/AppData/CommonAppData.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/App.xaml.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/App.xaml.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/App.xaml.cs",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/App.xaml.cs",
+              "line_start": 5,
+              "line_end": 5,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/App.xaml.cs",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Bloxstrap/App.xaml.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "check_name": "function_size",
+      "description": "Checks that functions/methods do not exceed line count thresholds",
+      "languages": [
+        "python"
+      ],
+      "check_type": "standard",
+      "total_entities_checked": 0,
+      "findings_count": 0,
+      "warning_count": 0,
+      "score": 1.0,
+      "finding_groups": []
+    },
+    {
+      "check_name": "circular_dependencies",
+      "description": "Detects circular dependencies between packages",
+      "languages": [
+        "python"
+      ],
+      "check_type": "circular_dependencies",
+      "cycles": [],
+      "packages_checked": 1,
+      "packages_in_cycles": 0
+    },
+    {
+      "check_name": "unused_code_diagnostics",
+      "description": "Detects unused imports, variables, functions, and dead code via LSP diagnostics",
+      "languages": [
+        "python"
+      ],
+      "check_type": "standard",
+      "total_entities_checked": 0,
+      "findings_count": 0,
+      "warning_count": 0,
+      "score": 1.0,
+      "finding_groups": []
+    }
+  ],
+  "file_summaries": [
+    {
+      "file_path": "Bloxstrap/UI/Elements/Settings/Pages/ShortcutsPage.xaml.cs",
+      "total_findings": 14,
+      "warning_findings": 14,
+      "composite_risk_score": 100.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/Settings/Pages/BootstrapperPage.xaml.cs",
+      "total_findings": 14,
+      "warning_findings": 14,
+      "composite_risk_score": 100.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/Dialogs/UninstallerDialog.xaml.cs",
+      "total_findings": 15,
+      "warning_findings": 15,
+      "composite_risk_score": 100.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/Dialogs/LaunchMenuDialog.xaml.cs",
+      "total_findings": 15,
+      "warning_findings": 15,
+      "composite_risk_score": 100.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/Dialogs/LanguageSelectorDialog.xaml.cs",
+      "total_findings": 13,
+      "warning_findings": 13,
+      "composite_risk_score": 100.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/Controls/OptionControl.xaml.cs",
+      "total_findings": 15,
+      "warning_findings": 15,
+      "composite_risk_score": 100.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/Controls/Expander.xaml.cs",
+      "total_findings": 16,
+      "warning_findings": 16,
+      "composite_risk_score": 100.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/ContextMenu/ServerInformation.xaml.cs",
+      "total_findings": 14,
+      "warning_findings": 14,
+      "composite_risk_score": 100.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/Bootstrapper/FluentDialog.xaml.cs",
+      "total_findings": 18,
+      "warning_findings": 18,
+      "composite_risk_score": 100.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/Bootstrapper/CustomDialog.Elements.cs",
+      "total_findings": 11,
+      "warning_findings": 11,
+      "composite_risk_score": 100.0
+    },
+    {
+      "file_path": "Bloxstrap/GlobalUsings.cs",
+      "total_findings": 14,
+      "warning_findings": 14,
+      "composite_risk_score": 100.0
+    },
+    {
+      "file_path": "Bloxstrap/Bootstrapper.cs",
+      "total_findings": 9,
+      "warning_findings": 9,
+      "composite_risk_score": 95.0
+    },
+    {
+      "file_path": "Bloxstrap/LaunchSettings.cs",
+      "total_findings": 9,
+      "warning_findings": 9,
+      "composite_risk_score": 95.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/ViewModels/Settings/ModsViewModel.cs",
+      "total_findings": 8,
+      "warning_findings": 8,
+      "composite_risk_score": 90.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/ViewModels/Editor/BootstrapperEditorWindowViewModel.cs",
+      "total_findings": 8,
+      "warning_findings": 8,
+      "composite_risk_score": 90.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/Installer/MainWindow.xaml.cs",
+      "total_findings": 8,
+      "warning_findings": 8,
+      "composite_risk_score": 90.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/Editor/BootstrapperEditorWindow.xaml.cs",
+      "total_findings": 8,
+      "warning_findings": 8,
+      "composite_risk_score": 90.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Elements/Controls/MarkdownTextBlock.cs",
+      "total_findings": 8,
+      "warning_findings": 8,
+      "composite_risk_score": 90.0
+    },
+    {
+      "file_path": "Bloxstrap/UI/Converters/EnumNameConverter.cs",
+      "total_findings": 8,
+      "warning_findings": 8,
+      "composite_risk_score": 90.0
+    },
+    {
+      "file_path": "Bloxstrap/App.xaml.cs",
+      "total_findings": 7,
+      "warning_findings": 7,
+      "composite_risk_score": 85.0
+    }
+  ]
+}
