@@ -23,11 +23,13 @@ namespace Bloxstrap
 
                 case NextAction.LaunchRoblox:
                     App.Logger.WriteLine(LOG_IDENT, "Opening Roblox");
+                    Integrations.LaunchHistory.Record(LaunchMode.Player);
                     LaunchRoblox(LaunchMode.Player);
                     break;
 
                 case NextAction.LaunchRobloxStudio:
                     App.Logger.WriteLine(LOG_IDENT, "Opening Roblox Studio");
+                    Integrations.LaunchHistory.Record(LaunchMode.Studio);
                     LaunchRoblox(LaunchMode.Studio);
                     break;
 
